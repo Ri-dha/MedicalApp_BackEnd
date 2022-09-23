@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.51 (L)" />
+    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.51 (L)">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_32_AM_[Changes]/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_32_AM_[Changes]1/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_33_AM_[Changes]/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinic/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/patient/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/controllers/clinic.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/controllers/clinic.py" afterDir="false" />
+    </list>
     <list id="c9577b22-c5cc-42ea-99b1-a29d0ccb3e2d" name="Changes by abbas" comment="4.8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +32,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MedicalApp_BackEnd" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py" root0="FORCE_HIGHLIGHTING" />
@@ -132,6 +142,7 @@
       <workItem from="1663969602268" duration="363000" />
       <workItem from="1663970027304" duration="81000" />
       <workItem from="1663970140900" duration="397000" />
+      <workItem from="1663970554848" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1662604926132</created>
@@ -343,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663969424462</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="0.51 (L)">
+      <created>1663970593246</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1663970593246</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

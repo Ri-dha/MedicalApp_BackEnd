@@ -24,6 +24,8 @@ def clinic_create(request, payload: ClinicIn):
             clinic.doctors.add(*doctors_)
             return 200, clinic
 
+
+
 @clinic_controller.get('clinic/show/{pk}', auth=AuthBearer(), response={200: ClinicOut , 403: MessageOut})
 def get_clinic(request, pk: str):
     clinic = Clinic.objects.get(id=pk)
