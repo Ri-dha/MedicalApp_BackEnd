@@ -75,7 +75,7 @@ def search_doctors(request, search: str):
 
 @doctor_controller.get('appointment/show/all', auth=AuthBearer(), response=List[AppointmentOut])
 def get_all_appointment(request):
-    appointments = Appointment.objects.filter(doctor=request.auth)
+    appointments = Appointment.objects.filter(doctor__user=request.auth)
     return appointments
 
 @doctor_controller.get('appointment/show/{pk}', auth=AuthBearer(), response={200: AppointmentOut, 403: MessageOut})
