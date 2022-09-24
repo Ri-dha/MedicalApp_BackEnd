@@ -12,6 +12,7 @@ User = get_user_model()
 
 class TypesOfDoctorChoices(Entity):
     GENERAL = 'General'
+    Dentist = 'DENTIST'
     Allergist = 'ALLERGIST'
     Anesthesiologist = 'ANESTHESIOLOGIST'
     Cardiologist = 'CARDIOLOGIST'
@@ -37,6 +38,7 @@ class TypesOfDoctorChoices(Entity):
     Other = 'OTHER'
     title = models.CharField('title', max_length=255, choices=[
         (GENERAL, GENERAL),
+        (Dentist, Dentist),
         (Allergist, Allergist),
         (Anesthesiologist, Anesthesiologist),
         (Cardiologist, Cardiologist),

@@ -29,7 +29,7 @@ class AppointmentIn(Schema):
 
 
 class AppointmentOut(Schema):
-    id: UUID4
+    id: UUID4=None
     patient: PatientData = None
     doctor: DoctorOut = None
     date: date
