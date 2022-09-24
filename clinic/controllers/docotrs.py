@@ -10,7 +10,7 @@ from Backend.utlis.utils import response
 from clinic.models import Doctor, TypesOfDoctorChoices
 from clinic.schemas import DoctorIn, DoctorOut
 from patient.models import Appointment
-from patient.schemas import AppointmentOut
+from patient.schemas import AppointmentOut, AppointmentIn
 
 doctor_controller = Router(tags=['Doctor'])
 
@@ -57,11 +57,6 @@ def get_doctors_by_specialty_and_city(request, specialty: str, city: str):
     return doctors
 
 
-@doctor_controller.get('appointment/show', auth=AuthBearer(), response={200: AppointmentOut, 403: MessageOut})
-def get_appointment(request):
-    appointment = Appointment.objects.get(doctor__user=request.auth)
-    return 200, appointment
-
 
 @doctor_controller.get('/search', auth=None, response={
     200: List[DoctorOut],
@@ -77,3 +72,22 @@ def search_doctors(request, search: str):
     if doctors:
         return 200, doctors
     return 404, {'message': 'No products found'}
+
+@doctor_controller.get('appointment/show/all', auth=AuthBearer(), response=List[AppointmentOut])
+def get_all_appointment(request):
+    appointments = Appointment.objects.filter(doctor=request.auth)
+    return appointments
+
+@doctor_controller.get('appointment/show/{pk}', auth=AuthBearer(), response={200: AppointmentOut, 403: MessageOut})
+def get_appointment(request, pk: str):
+    appointment = Appointment.objects.get(id=pk)
+    return 200, appointment
+
+
+# @doctor_controller.put('appointment/{pk}', auth=AuthBearer(), response={200: AppointmentOut, 403: MessageOut})
+# def update_appointment(request, pk: str, payload: AppointmentIn):
+#     appointment = Appointment.objects.get(id=pk)
+#     appointment.update(**payload.dict())
+#     return 200, appointment
+#
+#

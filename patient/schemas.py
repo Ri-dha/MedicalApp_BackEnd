@@ -26,6 +26,7 @@ class AppointmentIn(Schema):
     date: date
     time: time
     reason: str
+    approved: bool = None
 
 
 class AppointmentOut(Schema):
@@ -35,6 +36,7 @@ class AppointmentOut(Schema):
     date: date
     time: time
     reason: str
+    approved: bool = None
 
 
 class MedicalHistoryUpdate(Schema):
