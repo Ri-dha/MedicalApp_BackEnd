@@ -62,16 +62,16 @@ def get_doctors_by_specialty_and_city(request, specialty: str, city: str):
     200: List[DoctorOut],
     404: MessageOut
 })
-def search_doctors(request, search: str):
-    doctors = Doctor.objects.filter(
+def search_doctors(request, search: str=None):
 
+    doctors = Doctor.objects.filter(
         Q(specialty__title__icontains=search) |
         Q(city__icontains=search)
 
     )
     if doctors:
         return 200, doctors
-    return 404, {'message': 'No products found'}
+    return 404, {'message': 'No doctors found'}
 
 @doctor_controller.get('appointment/show/all', auth=AuthBearer(), response=List[AppointmentOut])
 def get_all_appointment(request):
@@ -84,10 +84,10 @@ def get_appointment(request, pk: str):
     return 200, appointment
 
 
-# @doctor_controller.put('appointment/{pk}', auth=AuthBearer(), response={200: AppointmentOut, 403: MessageOut})
-# def update_appointment(request, pk: str, payload: AppointmentIn):
-#     appointment = Appointment.objects.get(id=pk)
-#     appointment.update(**payload.dict())
-#     return 200, appointment
-#
-#
+@doctor_controller.put('appointment/{pk}', auth=AuthBearer(), response={200: MessageOut, 403: MessageOut})
+def update_appointment(request, pk: str, approved: bool):
+    appointment = Appointment.objects.filter(id=pk)
+    appointment.update(approved=approved)
+    return 200, {'message': 'Appointment updated successfully'}
+
+

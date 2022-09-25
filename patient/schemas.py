@@ -38,6 +38,8 @@ class AppointmentOut(Schema):
     reason: str
     approved: bool = None
 
+class AppointmentUpdate(Schema):
+    approved: bool = None
 
 class MedicalHistoryUpdate(Schema):
     gender: str

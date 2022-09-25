@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.52 (L)">
+    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.521 (L)">
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_32_AM_[Changes]/db.sqlite3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_32_AM_[Changes]1/db.sqlite3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_33_AM_[Changes]/db.sqlite3" afterDir="false" />
@@ -146,7 +146,9 @@
       <workItem from="1663970554848" duration="900000" />
       <workItem from="1663971487481" duration="56000" />
       <workItem from="1664052217358" duration="359000" />
-      <workItem from="1664053868121" duration="7412000" />
+      <workItem from="1664053868121" duration="8263000" />
+      <workItem from="1664067376356" duration="815000" />
+      <workItem from="1664135125918" duration="3348000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1662604926132</created>
@@ -379,7 +381,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664059679327</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="0.52 (L)">
+      <created>1664061685552</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664061685552</updated>
+    </task>
+    <task id="LOCAL-00035" summary="0.521 (L)">
+      <created>1664061846816</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1664061846816</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +434,8 @@
     <MESSAGE value="0.51 (L)" />
     <MESSAGE value="0.512 (L)" />
     <MESSAGE value="0.52 (L)" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.52 (L)" />
+    <MESSAGE value="0.521 (L)" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.521 (L)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
