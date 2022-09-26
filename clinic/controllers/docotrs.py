@@ -45,18 +45,6 @@ def get_all_doctors(request):
     return doctors
 
 
-@doctor_controller.get('/doctors/{specialty}', response=List[DoctorOut])
-def get_doctors_by_specialty(request, specialty: str):
-    doctors = Doctor.objects.filter(specialty__title=specialty)
-    return doctors
-
-
-@doctor_controller.get('/doctors/{specialty}/{city}', response=List[DoctorOut])
-def get_doctors_by_specialty_and_city(request, specialty: str, city: str):
-    doctors = Doctor.objects.filter(specialty__title=specialty, city=city)
-    return doctors
-
-
 
 @doctor_controller.get('/search', auth=None, response={
     200: List[DoctorOut],
@@ -89,5 +77,26 @@ def update_appointment(request, pk: str, approved: bool):
     appointment = Appointment.objects.filter(id=pk)
     appointment.update(approved=approved)
     return 200, {'message': 'Appointment updated successfully'}
+
+@doctor_controller.get('/doctors/isfeatured', response=List[DoctorOut])
+def get_featured_doctors(request):
+    doctors = Doctor.objects.filter(is_featured=True)
+    print(Doctor.objects.all())
+    return doctors
+
+
+
+@doctor_controller.get('/doctors/{specialty}/{city}', response=List[DoctorOut])
+def get_doctors_by_specialty_and_city(request, specialty: str, city: str):
+    doctors = Doctor.objects.filter(specialty__title=specialty, city=city)
+    return doctors
+
+@doctor_controller.get('/doctors/{specialty}', response=List[DoctorOut])
+def get_doctors_by_specialty(request, specialty: str):
+    doctors = Doctor.objects.filter(specialty__title=specialty)
+    return doctors
+
+
+
 
 

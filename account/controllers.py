@@ -5,6 +5,7 @@ from Backend.utlis.premission import create_token, AuthBearer
 from Backend.utlis.schemas import MessageOut
 from Backend.utlis.utils import response
 from clinic.models import Doctor
+from clinic.schemas import DoctorOut
 from patient.models import Patient
 from .models import EmailAccount
 from .schemas import AccountSignupOut, AccountSignupIn, AccountSigninOut, \
@@ -39,6 +40,7 @@ def register(request, payload: AccountSignupIn):
                 elif payload.account_type == 'doctor':
                     doctor = Doctor.objects.create(user=user)
                     doctor.save()
+                    return 201, doctor
             token = create_token(user.id)
             return response(HTTPStatus.OK, {
                 'profile': user,
