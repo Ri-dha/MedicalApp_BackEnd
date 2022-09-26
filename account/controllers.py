@@ -18,6 +18,7 @@ auth_controller = Router(tags=['Auth'])
 
 @auth_controller.post('/signup', response={200: AccountSignupOut, 403: MessageOut, 500: MessageOut})
 def register(request, payload: AccountSignupIn):
+    _id = None
     if payload.password1 != payload.password2:
         return response(HTTPStatus.BAD_REQUEST, {'message': 'Passwords does not match!'})
 
@@ -37,14 +38,17 @@ def register(request, payload: AccountSignupIn):
                 if payload.account_type == 'patient':
                     patient = Patient.objects.create(user=user)
                     patient.save()
+                    _id = patient.id
                 elif payload.account_type == 'doctor':
                     doctor = Doctor.objects.create(user=user)
                     doctor.save()
-                    return 201, doctor
+                    _id = doctor.id
+                    # return 201, doctor
             token = create_token(user.id)
             return response(HTTPStatus.OK, {
                 'profile': user,
-                'token': token
+                'token': token,
+                'profile_id': _id
             })
         else:
             return response(HTTPStatus.INTERNAL_SERVER_ERROR, {'message': 'An error occurred, please try again.'})

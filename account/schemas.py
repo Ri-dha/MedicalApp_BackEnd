@@ -32,6 +32,7 @@ class AccountSignupIn(Schema):
 class AccountSignupOut(Schema):
     profile: AccountOut
     token: Token
+    profile_id: UUID4
 
 
 class AccountConfirmationIn(Schema):

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.53 (L)">
+    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.6 (w)">
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_32_AM_[Changes]/db.sqlite3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_32_AM_[Changes]1/db.sqlite3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_33_AM_[Changes]/db.sqlite3" afterDir="false" />
@@ -14,7 +14,7 @@
       <change afterPath="$PROJECT_DIR$/patient/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/account/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinic/controllers/docotrs.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/controllers/docotrs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/schemas.py" afterDir="false" />
     </list>
     <list id="c9577b22-c5cc-42ea-99b1-a29d0ccb3e2d" name="Changes by abbas" comment="4.8" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +150,7 @@
       <workItem from="1664067376356" duration="815000" />
       <workItem from="1664135125918" duration="4629000" />
       <workItem from="1664161592612" duration="620000" />
-      <workItem from="1664201287525" duration="3136000" />
+      <workItem from="1664201287525" duration="4998000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1662604926132</created>
@@ -404,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664141017925</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="0.6 (w)">
+      <created>1664205036796</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1664205036796</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +452,8 @@
     <MESSAGE value="0.52 (L)" />
     <MESSAGE value="0.521 (L)" />
     <MESSAGE value="0.53 (L)" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.53 (L)" />
+    <MESSAGE value="0.6 (w)" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.6 (w)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
