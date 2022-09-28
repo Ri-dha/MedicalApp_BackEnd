@@ -34,6 +34,7 @@ def register(request, payload: AccountSignupIn):
             if not payload.account_type:
                 patient = Patient.objects.create(user=user)
                 patient.save()
+                _id = patient.id
             elif payload.account_type:
                 if payload.account_type == 'patient':
                     patient = Patient.objects.create(user=user)
