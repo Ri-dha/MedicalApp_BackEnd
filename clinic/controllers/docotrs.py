@@ -2,7 +2,7 @@ from http import HTTPStatus
 
 from django.db.models import Q
 from django.shortcuts import get_object_or_404
-from ninja import Router
+from ninja import Router, UploadedFile, File
 from typing import List
 
 from Backend.utlis import status
@@ -16,6 +16,11 @@ from patient.schemas import AppointmentOut, AppointmentIn
 
 doctor_controller = Router(tags=['Doctor'])
 
+@doctor_controller.post('patient/image', auth=AuthBearer(), response={200: MessageOut, 403: MessageOut})
+def post_patient_image(request, file: UploadedFile = File(...)):
+    patient = Doctor.objects.filter(user=request.auth)
+    patient.update(image=file)
+    return 200, {'message': 'Image uploaded successfully'}
 
 @doctor_controller.put('/doctor',
                        auth=AuthBearer(), response={200: MessageOut, 403: MessageOut})

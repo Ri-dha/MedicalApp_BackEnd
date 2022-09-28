@@ -20,12 +20,7 @@ class Patient(Entity):
         return self.user.first_name + ' ' + self.user.last_name
 
 
-class PatientImage(Entity):
-    patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='patientimage')
-    image = models.ImageField(upload_to='patient_images', blank=True, null=True)
 
-    def __str__(self):
-        return self.patient.user.first_name + ' ' + self.patient.user.last_name
 
 
 class TypeOfGenderChoices(Entity):

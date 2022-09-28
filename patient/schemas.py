@@ -112,5 +112,5 @@ class PatientImageIn(Schema):
 
 class PatientImageOut(Schema):
     id: UUID4
-    patient: UUID4
+    patient: PatientData
     image: str

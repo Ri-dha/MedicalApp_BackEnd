@@ -10,13 +10,20 @@ from Backend.utlis.premission import AuthBearer
 from Backend.utlis.schemas import MessageOut
 from Backend.utlis.utils import response
 from clinic.models import Doctor
-from patient.models import MedicalHistory, Patient, TypeOfGenderChoices, TypeOfBloodChoices, Appointment, Prescription, \
-    PatientImage,FavouriteDoctors
+from patient.models import MedicalHistory, Patient, TypeOfGenderChoices, TypeOfBloodChoices, Appointment, Prescription,FavouriteDoctors
 from patient.schemas import PatientData, MedicalHistoryIn, MedicalHistoryOut, \
     AppointmentIn, MedicalHistoryUpdate, PrescriptionOut, AppointmentOut, PatientImageOut, PatientImageIn, \
     PrescriptionIn, FavouriteDoctorsOut, FavouriteDoctorsIn
 
 patient_controller = Router(tags=['Patient'])
+
+
+
+@patient_controller.post('patient/image', auth=AuthBearer(), response={200: MessageOut, 403: MessageOut})
+def post_patient_image(request, file: UploadedFile = File(...)):
+    patient = Patient.objects.filter(user=request.auth)
+    patient.update(image=file)
+    return 200, {'message': 'Image uploaded successfully'}
 
 
 
@@ -88,6 +95,10 @@ def delete_favdocs(request, pk: UUID4):
     favdoc = FavouriteDoctors.objects.get(id=pk)
     favdoc.delete()
     return 200, {'message': 'Favdoc deleted successfully'}
+
+
+
+
 
 
 

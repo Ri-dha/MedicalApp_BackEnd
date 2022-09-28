@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ninja import NinjaAPI
+from django.conf.urls.static import static
 
+from Backend import settings
 from account.controllers import auth_controller
 from patient.controllers.patient import patient_controller
 from clinic.controllers.docotrs import doctor_controller
@@ -35,3 +37,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', api.urls),
 ]
+
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
