@@ -1,3 +1,5 @@
+from typing import List
+
 from ninja import Schema
 from pydantic import EmailStr, Field, UUID4
 from pydantic.schema import date, time
@@ -97,10 +99,11 @@ class PrescriptionOut(Schema):
     description: str = None
 
 
-class FavouriteDoctors(Schema):
+class FavouriteDoctorsIn(Schema):
+    doctor: UUID4
+class FavouriteDoctorsOut(Schema):
     id: UUID4
-    patient: PatientData
-    doctor: DoctorIn
+    doctor: DoctorOut
 
 
 class PatientImageIn(Schema):

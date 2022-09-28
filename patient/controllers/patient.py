@@ -1,4 +1,5 @@
 from http import HTTPStatus
+from typing import List
 
 from django.shortcuts import get_object_or_404
 from ninja import Router,File,NinjaAPI
@@ -10,10 +11,10 @@ from Backend.utlis.schemas import MessageOut
 from Backend.utlis.utils import response
 from clinic.models import Doctor
 from patient.models import MedicalHistory, Patient, TypeOfGenderChoices, TypeOfBloodChoices, Appointment, Prescription, \
-    PatientImage
+    PatientImage,FavouriteDoctors
 from patient.schemas import PatientData, MedicalHistoryIn, MedicalHistoryOut, \
     AppointmentIn, MedicalHistoryUpdate, PrescriptionOut, AppointmentOut, PatientImageOut, PatientImageIn, \
-    PrescriptionIn
+    PrescriptionIn, FavouriteDoctorsOut, FavouriteDoctorsIn
 
 patient_controller = Router(tags=['Patient'])
 
@@ -67,6 +68,26 @@ def update_medical_history(request, pk: UUID4, payload: MedicalHistoryUpdate):
     blood_group_ = TypeOfBloodChoices.objects.get(BloodChoices=blood_group)
     medical_history.update(**payload, gender=gender_, blood_group=blood_group_)
     return 200, {'message': 'Medical history updated successfully'}
+@patient_controller.get('/patient/favdocs', auth=AuthBearer(), response={200: List[FavouriteDoctorsOut], 403: MessageOut})
+def get_favdocs(request):
+    patient = Patient.objects.get(user=request.auth)
+    favdocs = FavouriteDoctors.objects.filter(patient=patient)
+    return 200, favdocs
+
+
+@patient_controller.post('/patient/favdocs', auth=AuthBearer(), response={200: MessageOut, 403: MessageOut})
+def add_favdocs(request, payload: FavouriteDoctorsIn):
+    patient = Patient.objects.get(user=request.auth)
+    doctor = Doctor.objects.get(id=payload.doctor)
+    favdoc = FavouriteDoctors.objects.create(patient=patient, doctor=doctor)
+    favdoc.save()
+    return 200, {'message': 'Favdoc added successfully'}
+
+@patient_controller.delete('/patient/favdocs/{pk}', auth=AuthBearer(), response={200: MessageOut, 403: MessageOut})
+def delete_favdocs(request, pk: UUID4):
+    favdoc = FavouriteDoctors.objects.get(id=pk)
+    favdoc.delete()
+    return 200, {'message': 'Favdoc deleted successfully'}
 
 
 
