@@ -4,11 +4,13 @@ from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from ninja import Router
 from typing import List
+
+from Backend.utlis import status
 from Backend.utlis.premission import AuthBearer
 from Backend.utlis.schemas import MessageOut
 from Backend.utlis.utils import response
 from clinic.models import Doctor, TypesOfDoctorChoices
-from clinic.schemas import DoctorIn, DoctorOut
+from clinic.schemas import DoctorIn, DoctorOut, DoctorDataOut
 from patient.models import Appointment
 from patient.schemas import AppointmentOut, AppointmentIn
 
@@ -39,10 +41,13 @@ def get_doctor(request):
     return response(HTTPStatus.OK, user)
 
 
-@doctor_controller.get('/doctors/all', response=List[DoctorOut])
-def get_all_doctors(request):
+@doctor_controller.get('/doctors/all', response= DoctorDataOut)
+def get_all_doctors(request, per_page: int = 12, page: int = 1):
     doctors = Doctor.objects.all()
-    return doctors
+    return response(status.HTTP_200_OK, doctors, paginated=True, per_page=per_page, page=page)
+
+
+
 
 
 
@@ -78,23 +83,21 @@ def update_appointment(request, pk: str, approved: bool):
     appointment.update(approved=approved)
     return 200, {'message': 'Appointment updated successfully'}
 
-@doctor_controller.get('/doctors/isfeatured', response=List[DoctorOut])
-def get_featured_doctors(request):
+@doctor_controller.get('/doctors/isfeatured', response=DoctorDataOut)
+def get_featured_doctors(request, per_page: int = 12, page: int = 1):
     doctors = Doctor.objects.filter(is_featured=True)
-    print(Doctor.objects.all())
-    return doctors
+    # print(Doctor.objects.all())
+    return response(status.HTTP_200_OK, doctors, paginated=True, per_page=per_page, page=page)
 
+@doctor_controller.get('/doctors/active', response=DoctorDataOut)
+def get_active_doctors(request, per_page: int = 12, page: int = 1):
+    doctors = Doctor.objects.filter(is_active=True)
+    return response(status.HTTP_200_OK, doctors, paginated=True, per_page=per_page, page=page)
 
-
-@doctor_controller.get('/doctors/{specialty}/{city}', response=List[DoctorOut])
-def get_doctors_by_specialty_and_city(request, specialty: str, city: str):
-    doctors = Doctor.objects.filter(specialty__title=specialty, city=city)
-    return doctors
-
-@doctor_controller.get('/doctors/{specialty}', response=List[DoctorOut])
-def get_doctors_by_specialty(request, specialty: str):
+@doctor_controller.get('/doctors/{specialty}', response=DoctorDataOut)
+def get_doctors_by_specialty(request, specialty: str, per_page: int = 12, page: int = 1):
     doctors = Doctor.objects.filter(specialty__title=specialty)
-    return doctors
+    return response(status.HTTP_200_OK, doctors, paginated=True, per_page=per_page, page=page)
 
 
 

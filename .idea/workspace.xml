@@ -8,13 +8,14 @@
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_32_AM_[Changes]/db.sqlite3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_32_AM_[Changes]1/db.sqlite3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_24_2022_12_33_AM_[Changes]/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/utlis/status.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/account/migrations/0001_initial.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/clinic/migrations/0001_initial.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/patient/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/controllers/docotrs.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/controllers/docotrs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinic/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/schemas.py" afterDir="false" />
     </list>
     <list id="c9577b22-c5cc-42ea-99b1-a29d0ccb3e2d" name="Changes by abbas" comment="4.8" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +151,9 @@
       <workItem from="1664067376356" duration="815000" />
       <workItem from="1664135125918" duration="4629000" />
       <workItem from="1664161592612" duration="620000" />
-      <workItem from="1664201287525" duration="4998000" />
+      <workItem from="1664201287525" duration="6267000" />
+      <workItem from="1664325517535" duration="960000" />
+      <workItem from="1664395422416" duration="1585000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1662604926132</created>
@@ -411,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664205036796</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="0.6 (w)">
+      <created>1664212182219</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1664212182219</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

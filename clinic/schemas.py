@@ -37,6 +37,18 @@ class DoctorOut(Schema):
     is_active: bool = None
     is_featured: bool = None
 
+class DoctorDataOut(Schema):
+    total_count: int = None
+    per_page: int = None
+    from_record: int = None
+    to_record: int = None
+    previous_page: int = None
+    next_page: int = None
+    current_page: int = None
+    page_count: int = None
+    data: List[DoctorOut]
+
+
 
 class Speciality(Schema):
     name: str = None
