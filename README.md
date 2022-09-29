@@ -3,6 +3,6 @@
 veni, vidi, vici
 
 For any Inquires and questions :
-https://www.instagram.com/ridhata774/
-https://www.linkedin.com/in/ridha-tareq/
-https://github.com/Ri-dha
+[ INSTAGRAM(https://www.instagram.com/ridhata774/)]
+[LINKEDIN(https://www.linkedin.com/in/ridha-tareq/)]
+[GITHUB(https://github.com/Ri-dha)]
