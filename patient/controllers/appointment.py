@@ -2,9 +2,10 @@ from typing import List
 
 from ninja import Router
 
-
+from Backend.utlis import status
 from Backend.utlis.premission import AuthBearer
 from Backend.utlis.schemas import MessageOut
+from Backend.utlis.utils import response
 from clinic.models import Doctor
 from patient.models import Patient, Appointment
 from patient.schemas import AppointmentIn, AppointmentOut
@@ -34,7 +35,7 @@ def get_appointment(request, pk: str):
     return 200, appointment
 
 @appointment_controller.get('appointment/show/all', auth=AuthBearer(), response=List[AppointmentOut])
-def get_all_appointment(request):
+def get_all_appointment(request,per_page: int = 12, page: int = 1):
     appointments = Appointment.objects.filter(patient=request.auth)
-    return appointments
+    return response(status.HTTP_200_OK, appointment, paginated=True, per_page=per_page, page=page)
 
