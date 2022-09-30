@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.72 (ADDED doctor images and patient images)">
-      <change beforePath="$PROJECT_DIR$/clinic/controllers/docotrs.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/controllers/docotrs.py" afterDir="false" />
+    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.72">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="c9577b22-c5cc-42ea-99b1-a29d0ccb3e2d" name="Changes by abbas" comment="4.8" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +146,7 @@
       <workItem from="1664395422416" duration="7307000" />
       <workItem from="1664464241171" duration="4257000" />
       <workItem from="1664490442921" duration="616000" />
-      <workItem from="1664560599629" duration="609000" />
+      <workItem from="1664560599629" duration="1393000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1662604926132</created>
@@ -484,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664561007706</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="0.72">
+      <created>1664561222307</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1664561222307</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0.232" />
     <MESSAGE value="0.3" />
     <MESSAGE value="0.31" />
     <MESSAGE value="0.311" />
@@ -527,7 +533,8 @@
     <MESSAGE value="0.7 (ADDED doctor images and patient images)" />
     <MESSAGE value="0.71 (ADDED doctor images and patient images)" />
     <MESSAGE value="0.72 (ADDED doctor images and patient images)" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.72 (ADDED doctor images and patient images)" />
+    <MESSAGE value="0.72" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.72" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
