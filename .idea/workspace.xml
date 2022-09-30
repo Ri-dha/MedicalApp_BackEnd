@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.71 (ADDED doctor images and patient images)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.72 (ADDED doctor images and patient images)" />
     <list id="c9577b22-c5cc-42ea-99b1-a29d0ccb3e2d" name="Changes by abbas" comment="4.8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +144,7 @@
       <workItem from="1664395422416" duration="7307000" />
       <workItem from="1664464241171" duration="4257000" />
       <workItem from="1664490442921" duration="616000" />
+      <workItem from="1664560599629" duration="301000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1662604926132</created>
@@ -462,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664476637680</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="0.72 (ADDED doctor images and patient images)">
+      <created>1664560856454</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1664560856454</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,7 +486,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0.231" />
     <MESSAGE value="0.232" />
     <MESSAGE value="0.3" />
     <MESSAGE value="0.31" />
@@ -505,7 +510,8 @@
     <MESSAGE value="0.7 (ADDED FAVRIOT DOCTORS)" />
     <MESSAGE value="0.7 (ADDED doctor images and patient images)" />
     <MESSAGE value="0.71 (ADDED doctor images and patient images)" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.71 (ADDED doctor images and patient images)" />
+    <MESSAGE value="0.72 (ADDED doctor images and patient images)" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.72 (ADDED doctor images and patient images)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
