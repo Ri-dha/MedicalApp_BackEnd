@@ -72,9 +72,9 @@ def search_doctors(request, search: str = None):
 
 
 @doctor_controller.get('appointment/show/all', auth=AuthBearer(), response=List[AppointmentOut])
-def get_all_appointment(request):
+def get_all_appointment(request, per_page: int = 12, page: int = 1):
     appointments = Appointment.objects.filter(doctor__user=request.auth)
-    return appointments
+    return response(status.HTTP_200_OK, appointments, paginated=True, per_page=per_page, page=page)
 
 
 @doctor_controller.get('appointment/show/{pk}', auth=AuthBearer(), response={200: AppointmentOut, 403: MessageOut})
