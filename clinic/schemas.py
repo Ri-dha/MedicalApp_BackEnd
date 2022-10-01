@@ -18,7 +18,7 @@ class DoctorIn(Schema):
     address: str = None
     gadress: str = None
     city: str = None
-    phone: int = None
+    phone: str = None
     specialty: str = None
     email: EmailStr = None
     images: str = None
@@ -32,7 +32,7 @@ class DoctorOut(Schema):
     address: str = None
     gadress: str = None
     city: str = None
-    phone: int = None
+    phone: str = None
     specialty: DoctorType = None
     email: EmailStr = None
     images: str = None
@@ -62,7 +62,7 @@ class ClinicIn(Schema):
     address: str=None
     gadress: str=None
     city: str=None
-    phone: int=None
+    phone: str=None
     email: EmailStr=None
     website: str=None
     logo: str=None
@@ -77,7 +77,7 @@ class ClinicOut(Schema):
     gadress: str=None
     city: str=None
 
-    phone: int=None
+    phone: str=None
     email: EmailStr=None
     website: str=None
     logo: str=None
