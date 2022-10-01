@@ -58,11 +58,20 @@ def register(request, payload: AccountSignupIn):
 
 @auth_controller.post('/signin', response={200: AccountSigninOut, 404: MessageOut})
 def login(request, payload: AccountSigninIn):
+    profile_id = None
+
     user = authenticate(email=payload.email, password=payload.password)
     if user is not None:
+        if user.account_type == 'patient':
+            patient = Patient.objects.get(user=user)
+            profile_id = patient.id
+        elif user.account_type == 'doctor':
+            doctor = Doctor.objects.get(user=user)
+            profile_id = doctor.id
         return response(HTTPStatus.OK, {
             'profile': user,
-            'token': create_token(user.id)
+            'token': create_token(user.id),
+            'profile_id': profile_id
         })
     return response(HTTPStatus.NOT_FOUND, {'message': 'User not found'})
 

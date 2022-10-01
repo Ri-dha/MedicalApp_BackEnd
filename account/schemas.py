@@ -51,6 +51,7 @@ class AccountUpdateIn(Schema):
 class AccountSigninOut(Schema):
     profile: AccountOut
     token: Token
+    profile_id: UUID4
 
 
 class AccountSigninIn(Schema):
