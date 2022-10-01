@@ -39,6 +39,7 @@ class DoctorOut(Schema):
     is_active: bool = None
     is_featured: bool = None
 
+
 class DoctorDataOut(Schema):
     total_count: int = None
     per_page: int = None
