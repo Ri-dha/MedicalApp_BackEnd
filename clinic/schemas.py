@@ -21,7 +21,7 @@ class DoctorIn(Schema):
     phone: int = None
     specialty: str = None
     email: EmailStr = None
-    image: str = None
+    images: str = None
     is_active: bool = None
     is_featured: bool = None
 
@@ -35,7 +35,7 @@ class DoctorOut(Schema):
     phone: int = None
     specialty: DoctorType = None
     email: EmailStr = None
-    image: str = None
+    images: str = None
     is_active: bool = None
     is_featured: bool = None
 

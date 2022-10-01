@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.72" />
+    <list default="true" id="ca1de846-3de4-46f9-8a71-74454c201466" name="Changes" comment="0.73">
+      <change beforePath="$PROJECT_DIR$/clinic/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/clinic/schemas.py" afterDir="false" />
+    </list>
     <list id="c9577b22-c5cc-42ea-99b1-a29d0ccb3e2d" name="Changes by abbas" comment="4.8" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,20 +150,7 @@
       <workItem from="1664560599629" duration="2650000" />
       <workItem from="1664578117301" duration="1271000" />
       <workItem from="1664636385489" duration="1536000" />
-    </task>
-    <task id="LOCAL-00005" summary="0.2">
-      <created>1662686594512</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1662686594512</updated>
-    </task>
-    <task id="LOCAL-00006" summary="0.23">
-      <created>1662687724803</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1662687724803</updated>
+      <workItem from="1664643488699" duration="328000" />
     </task>
     <task id="LOCAL-00007" summary="0.231">
       <created>1662758311839</created>
@@ -492,7 +481,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664637228685</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="0.72">
+      <created>1664643610243</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1664643610243</updated>
+    </task>
+    <task id="LOCAL-00055" summary="0.73">
+      <created>1664643657539</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1664643657539</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0.3" />
     <MESSAGE value="0.31" />
     <MESSAGE value="0.311" />
     <MESSAGE value="0.312" />
@@ -535,7 +537,8 @@
     <MESSAGE value="0.71 (ADDED doctor images and patient images)" />
     <MESSAGE value="0.72 (ADDED doctor images and patient images)" />
     <MESSAGE value="0.72" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.72" />
+    <MESSAGE value="0.73" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.73" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
