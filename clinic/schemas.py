@@ -2,7 +2,7 @@ from ninja import Schema
 from pydantic import EmailStr, Field, UUID4
 from ninja.orm import create_schema
 from typing import List
-
+from datetime import time
 from account.schemas import AccountName
 from clinic.models import TypesOfDoctorChoices
 
@@ -95,3 +95,12 @@ class ClinicDoctors(Schema):
 class DoctorImage(Schema):
     id: UUID4
     image: str
+
+class WeekDays(Schema):
+    sunday:list[time]
+    monday:list[time]
+    tuesday:list[time]
+    wednesday:list[time]
+    thursday:list[time]
+    friday:list[time]
+    saturday:list[time]

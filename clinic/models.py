@@ -123,6 +123,16 @@ class Schedule(Entity):
 
 
 
+class ActiveDate(models.Model):
+    doctor = models.ForeignKey(Doctor,on_delete=models.DO_NOTHING,related_name="active_date")
+    datetime = models.DateTimeField(unique=True)
+    
+    def __str__(self):
+        return f"{self.doctor.full_name} {self.datetime}"
+
+
+
+
 # class ClinicDoctors(Entity):
 #     clinic = models.ForeignKey(Clinic, on_delete=models.CASCADE)
 #     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)

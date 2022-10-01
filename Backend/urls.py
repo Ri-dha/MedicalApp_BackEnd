@@ -23,6 +23,7 @@ from account.controllers import auth_controller
 from patient.controllers.patient import patient_controller
 from clinic.controllers.docotrs import doctor_controller
 from clinic.controllers.clinic import clinic_controller
+from clinic.controllers.active_dates import router as active_dates_controller
 from patient.controllers.appointment import appointment_controller
 from patient.controllers.prescription import prescription_controller
 
@@ -32,6 +33,7 @@ api.add_router('patient', patient_controller)
 api.add_router('doctor', doctor_controller)
 api.add_router('appointment', appointment_controller)
 api.add_router('prescription', prescription_controller)
+api.add_router('active_dates', active_dates_controller)
 api.add_router('clinic', clinic_controller)
 urlpatterns = [
     path('admin/', admin.site.urls),
